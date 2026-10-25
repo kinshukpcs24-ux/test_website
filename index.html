@@ -4,115 +4,116 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#090b14">
-  <title>Blockfall — Tetris</title>
+  <meta name="description" content="Reliable, personal website hosting with dedicated resources and straightforward monthly pricing.">
+  <title>Personal Hosting — Simple Website Hosting</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="app">
-    <header class="topbar">
-      <a class="brand" href="#">
-        <span class="brand-icon">▦</span> BLOCKFALL
-      </a>
-      <span class="top-label">ARCADE / 001</span>
-    </header>
 
-    <main>
-      <section class="intro">
-        <div class="eyebrow">THE CLASSIC ARCADE EXPERIENCE</div>
-        <h1>Think fast.<br><span>Stack smart.</span></h1>
-        <p>Clear lines. Beat your high score. Keep the blocks falling.</p>
-      </section>
+  <header class="navbar">
+    <a href="#" class="logo"><span class="logo-icon">◆</span> PersonalHost</a>
+    <a href="#contact" class="nav-button">Get Started ↗</a>
+  </header>
 
-      <section class="game-layout">
-        <aside class="panel stats-panel">
-          <div class="panel-heading">YOUR STATS</div>
+  <main>
+    <section class="hero">
+      <div class="eyebrow"><span class="dot"></span> SIMPLE. RELIABLE. PERSONAL.</div>
+      <h1>Your website.<br><span>Your own space.</span></h1>
+      <p class="hero-text">
+        Website hosting with dedicated resources, straightforward pricing,
+        and a personal approach. Host your next project without the hassle.
+      </p>
+      <a href="#pricing" class="button">Explore Hosting Plan <span>→</span></a>
+      <div class="hero-note">Built for personal websites, portfolios and small projects.</div>
 
-          <div class="stat">
-            <span>SCORE</span>
-            <strong id="score">000000</strong>
-          </div>
-          <div class="stat">
-            <span>BEST</span>
-            <strong id="best">000000</strong>
-          </div>
-          <div class="stat">
-            <span>LINES</span>
-            <strong id="lines">0</strong>
-          </div>
-          <div class="stat">
-            <span>LEVEL</span>
-            <strong id="level">1</strong>
-          </div>
-
-          <div class="divider"></div>
-          <div class="panel-heading">CONTROLS</div>
-          <div class="key-row"><kbd>←</kbd><kbd>→</kbd><span>Move</span></div>
-          <div class="key-row"><kbd>↑</kbd><span>Rotate</span></div>
-          <div class="key-row"><kbd>↓</kbd><span>Soft drop</span></div>
-          <div class="key-row"><kbd>SPACE</kbd><span>Hard drop</span></div>
-          <div class="key-row"><kbd>P</kbd><span>Pause</span></div>
-        </aside>
-
-        <div class="board-column">
-          <div class="board-top">
-            <span><i class="live-dot"></i> GAME ARENA</span>
-            <span id="status">READY</span>
-          </div>
-
-          <div class="board-wrap">
-            <canvas id="game" width="300" height="600"
-              aria-label="Tetris game board"></canvas>
-
-            <div id="overlay" class="overlay">
-              <div class="overlay-card">
-                <div class="overlay-tag">BLOCKFALL ARCADE</div>
-                <h2 id="overlay-title">Ready to play?</h2>
-                <p id="overlay-message">Stack blocks and clear lines to score.</p>
-                <button id="start-btn" class="primary-btn">START GAME →</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="mobile-controls">
-            <button data-action="left" aria-label="Move left">←</button>
-            <button data-action="rotate" aria-label="Rotate">↻</button>
-            <button data-action="right" aria-label="Move right">→</button>
-            <button data-action="down" aria-label="Soft drop">↓</button>
-            <button data-action="drop" aria-label="Hard drop">DROP</button>
-          </div>
-
-          <div class="board-footer">
-            <span>10 × 20 GRID</span>
-            <span>BUILT FOR YOUR NEXT HIGH SCORE</span>
+      <div class="visual">
+        <div class="visual-top">
+          <div class="window-dots"><i></i><i></i><i></i></div>
+          <span>YOUR HOSTING ENVIRONMENT</span>
+          <span class="online"><i></i> ONLINE</span>
+        </div>
+        <div class="visual-content">
+          <div class="server-icon">▤</div>
+          <h2>Your project, hosted.</h2>
+          <p>Resources allocated to your website.</p>
+          <div class="resource-grid">
+            <div class="resource"><strong>2 GB</strong><span>RAM</span></div>
+            <div class="resource"><strong>1 CPU</strong><span>PROCESSING</span></div>
+            <div class="resource"><strong>15 GB</strong><span>STORAGE</span></div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <aside class="panel next-panel">
-          <div class="panel-heading">UP NEXT</div>
-          <div class="next-box">
-            <canvas id="next" width="120" height="120"
-              aria-label="Next piece preview"></canvas>
-          </div>
-          <div class="divider"></div>
-          <div class="panel-heading">HOW TO PLAY</div>
-          <p class="help-text">Move and rotate falling blocks to create complete horizontal lines.</p>
-          <p class="help-text">Every cleared line earns points. Clear more lines at once for a bigger reward.</p>
-          <button id="pause-btn" class="secondary-btn" disabled>Ⅱ &nbsp; PAUSE</button>
-          <button id="restart-btn" class="secondary-btn">↻ &nbsp; RESTART</button>
-        </aside>
-      </section>
+    <section class="features" id="features">
+      <div class="section-label">WHY HOST WITH ME</div>
+      <h2>Hosting without the complexity.</h2>
+      <p class="section-intro">A straightforward hosting service for getting your website online.</p>
 
-      <section class="bottom-note">
-        <span>01 / STAY SHARP</span>
-        <span>02 / PLAN YOUR STACK</span>
-        <span>03 / CLEAR THE BOARD</span>
-      </section>
-    </main>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <div class="feature-icon purple">⌘</div>
+          <h3>Dedicated resources</h3>
+          <p>A hosting plan with 2 GB RAM, 1 CPU and 15 GB of storage allocated to your environment.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon blue">↗</div>
+          <h3>Bring your project</h3>
+          <p>Suitable for personal websites, portfolios, landing pages and lightweight web applications.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon green">₹</div>
+          <h3>Clear monthly pricing</h3>
+          <p>One simple monthly price, so you know what your hosting costs from the start.</p>
+        </article>
+      </div>
+    </section>
 
-    <footer>BLOCKFALL ARCADE <span>•</span> A CLASSIC, REIMAGINED</footer>
-  </div>
+    <section class="pricing" id="pricing">
+      <div class="section-label">SIMPLE PRICING</div>
+      <h2>One plan. No confusion.</h2>
+      <p class="section-intro">The resources you need to get your project online.</p>
 
-  <script src="script.js"></script>
+      <div class="price-card">
+        <div class="plan-name">PERSONAL HOSTING PLAN</div>
+        <div class="price">₹5,000 <span>/ month</span></div>
+        <p class="price-description">Straightforward hosting for your website or project.</p>
+        <div class="price-divider"></div>
+
+        <ul class="spec-list">
+          <li><span class="check">✓</span><span><strong>2 GB RAM</strong><small>Memory allocation</small></span></li>
+          <li><span class="check">✓</span><span><strong>1 CPU</strong><small>Processing resource</small></span></li>
+          <li><span class="check">✓</span><span><strong>15 GB storage</strong><small>Space for your website and files</small></span></li>
+          <li><span class="check">✓</span><span><strong>Monthly hosting</strong><small>Simple recurring plan</small></span></li>
+        </ul>
+
+        <a class="button price-button" href="#contact">Enquire About Hosting →</a>
+        <p class="price-footnote">Domain registration, backups, SSL, support and other extras can be discussed before setup.</p>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="contact-copy">
+        <div class="section-label">LET'S GET STARTED</div>
+        <h2>Ready to host<br><span>your website?</span></h2>
+        <p>Tell me about your project and what you want to host. I'll help you figure out the next steps.</p>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">✉</div>
+        <h3>Let's talk about your project.</h3>
+        <p>Reach out to discuss your hosting requirements, setup and availability.</p>
+        <!-- Replace the email below with your actual email address. -->
+        <a class="button" href="mailto:YOUR_EMAIL@example.com?subject=Website%20Hosting%20Enquiry">Contact Me →</a>
+        <small>Replace YOUR_EMAIL@example.com with your email address.</small>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a href="#" class="logo"><span class="logo-icon">◆</span> PersonalHost</a>
+    <span>Simple hosting. Personal service.</span>
+    <span>© <span id="year">2026</span></span>
+  </footer>
+
 </body>
 </html>
