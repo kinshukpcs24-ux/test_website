@@ -5,7 +5,7 @@ A simple website advertising self-hosted website hosting services.
 
 ## Hosting plan
 
-- Price: ₹5,000 per month
+- Price: ₹15,000 per month
 - RAM: 2 GB
 - CPU: 1 CPU
 - Storage: 15 GB
