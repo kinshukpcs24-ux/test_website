@@ -4,64 +4,114 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A simple, modern website.">
-  <title>My Website</title>
+  <meta name="theme-color" content="#090b14">
+  <title>Blockfall — Tetris</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="navbar">
-    <a class="logo" href="#">MyWebsite<span>.</span></a>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#features">Features</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero" id="home">
-      <p class="eyebrow">SIMPLE. MODERN. YOURS.</p>
-      <h1>Build something<br><span>remarkable.</span></h1>
-      <p class="subtitle">
-        A lightweight website, ready to make your ideas
-        accessible to the world.
-      </p>
-      <a class="button" href="#features">Explore more →</a>
-    </section>
-
-    <section class="features" id="features">
-      <h2>Designed to be simple.</h2>
-      <div class="cards">
-        <article class="card">
-          <div class="symbol">01</div>
-          <h3>Fast</h3>
-          <p>Lightweight code with no heavy frameworks or dependencies.</p>
-        </article>
-        <article class="card">
-          <div class="symbol">02</div>
-          <h3>Responsive</h3>
-          <p>A clean layout that works on desktops, tablets and phones.</p>
-        </article>
-        <article class="card">
-          <div class="symbol">03</div>
-          <h3>Self-hosted</h3>
-          <p>Deploy on your own server using Coolify.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="contact" id="contact">
-      <h2>Have an idea?</h2>
-      <p>Let's make it happen.</p>
-      <a class="button" href="mailto:hello@example.com">
-        Get in touch →
+  <div class="app">
+    <header class="topbar">
+      <a class="brand" href="#">
+        <span class="brand-icon">▦</span> BLOCKFALL
       </a>
-    </section>
-  </main>
+      <span class="top-label">ARCADE / 001</span>
+    </header>
 
-  <footer>
-    <p>© <span id="year"></span> MyWebsite. All rights reserved.</p>
-  </footer>
+    <main>
+      <section class="intro">
+        <div class="eyebrow">THE CLASSIC ARCADE EXPERIENCE</div>
+        <h1>Think fast.<br><span>Stack smart.</span></h1>
+        <p>Clear lines. Beat your high score. Keep the blocks falling.</p>
+      </section>
+
+      <section class="game-layout">
+        <aside class="panel stats-panel">
+          <div class="panel-heading">YOUR STATS</div>
+
+          <div class="stat">
+            <span>SCORE</span>
+            <strong id="score">000000</strong>
+          </div>
+          <div class="stat">
+            <span>BEST</span>
+            <strong id="best">000000</strong>
+          </div>
+          <div class="stat">
+            <span>LINES</span>
+            <strong id="lines">0</strong>
+          </div>
+          <div class="stat">
+            <span>LEVEL</span>
+            <strong id="level">1</strong>
+          </div>
+
+          <div class="divider"></div>
+          <div class="panel-heading">CONTROLS</div>
+          <div class="key-row"><kbd>←</kbd><kbd>→</kbd><span>Move</span></div>
+          <div class="key-row"><kbd>↑</kbd><span>Rotate</span></div>
+          <div class="key-row"><kbd>↓</kbd><span>Soft drop</span></div>
+          <div class="key-row"><kbd>SPACE</kbd><span>Hard drop</span></div>
+          <div class="key-row"><kbd>P</kbd><span>Pause</span></div>
+        </aside>
+
+        <div class="board-column">
+          <div class="board-top">
+            <span><i class="live-dot"></i> GAME ARENA</span>
+            <span id="status">READY</span>
+          </div>
+
+          <div class="board-wrap">
+            <canvas id="game" width="300" height="600"
+              aria-label="Tetris game board"></canvas>
+
+            <div id="overlay" class="overlay">
+              <div class="overlay-card">
+                <div class="overlay-tag">BLOCKFALL ARCADE</div>
+                <h2 id="overlay-title">Ready to play?</h2>
+                <p id="overlay-message">Stack blocks and clear lines to score.</p>
+                <button id="start-btn" class="primary-btn">START GAME →</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="mobile-controls">
+            <button data-action="left" aria-label="Move left">←</button>
+            <button data-action="rotate" aria-label="Rotate">↻</button>
+            <button data-action="right" aria-label="Move right">→</button>
+            <button data-action="down" aria-label="Soft drop">↓</button>
+            <button data-action="drop" aria-label="Hard drop">DROP</button>
+          </div>
+
+          <div class="board-footer">
+            <span>10 × 20 GRID</span>
+            <span>BUILT FOR YOUR NEXT HIGH SCORE</span>
+          </div>
+        </div>
+
+        <aside class="panel next-panel">
+          <div class="panel-heading">UP NEXT</div>
+          <div class="next-box">
+            <canvas id="next" width="120" height="120"
+              aria-label="Next piece preview"></canvas>
+          </div>
+          <div class="divider"></div>
+          <div class="panel-heading">HOW TO PLAY</div>
+          <p class="help-text">Move and rotate falling blocks to create complete horizontal lines.</p>
+          <p class="help-text">Every cleared line earns points. Clear more lines at once for a bigger reward.</p>
+          <button id="pause-btn" class="secondary-btn" disabled>Ⅱ &nbsp; PAUSE</button>
+          <button id="restart-btn" class="secondary-btn">↻ &nbsp; RESTART</button>
+        </aside>
+      </section>
+
+      <section class="bottom-note">
+        <span>01 / STAY SHARP</span>
+        <span>02 / PLAN YOUR STACK</span>
+        <span>03 / CLEAR THE BOARD</span>
+      </section>
+    </main>
+
+    <footer>BLOCKFALL ARCADE <span>•</span> A CLASSIC, REIMAGINED</footer>
+  </div>
 
   <script src="script.js"></script>
 </body>
